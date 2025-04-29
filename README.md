@@ -1,2 +1,3 @@
 The state machine is the cornerstone of great movement in games. They allow for flexible and complex movement systems that don't overwhelm your computer...
+
 this is my interpretation of implementation
