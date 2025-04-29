@@ -1,9 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctbw7bys3um61"]
+[gd_scene load_steps=5 format=3 uid="uid://ctbw7bys3um61"]
 
 [ext_resource type="Script" uid="uid://dk8qinno4dvp3" path="res://player.gd" id="1_nxogm"]
 [ext_resource type="Texture2D" uid="uid://cu68ldd8gvahf" path="res://icon.svg" id="1_ulcgi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drvgu"]
+size = Vector2(128, 128)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nxogm"]
+distance = -641.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -16,3 +20,8 @@ shape = SubResource("RectangleShape2D_drvgu")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 texture = ExtResource("1_ulcgi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_nxogm")

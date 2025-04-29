@@ -1,7 +1,6 @@
-class_name State extends Node
+extends PlayerState
 
-func _init() -> void:
-	print("STATE READY!")
+#enum { IDLE, MOVING, AIR }
 
 func handle_input(event: InputEvent) -> void:
 	pass

@@ -1,6 +1,11 @@
 class_name PlayerState extends State
 
 enum { IDLE, MOVING, AIR }
+var player: Player
+
+func _init(stateOwner: Player) -> void:
+	player = stateOwner
+	print(player)
 
 func handle_input(event: InputEvent) -> void:
 	pass
